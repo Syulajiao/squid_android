@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Squid VPN</string>
+    <string name="menu_item_toggle_global">Toggle global mode</string>
+    <string name="menu_item_switch">Proxy</string>
+    <string name="menu_item_about">About</string>
+    <string name="menu_item_exit">Exit</string>
+    <string name="config_url">Config URL</string>
+    <string name="config_not_set_value">Not set</string>
+    <string name="config_url_scan">Scan an QR code</string>
+    <string name="config_url_manual">Type manually</string>
+    <string name="config_url_scan_hint">Scan the QR code of your config url</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_more">More&#8230;</string>
+    <string name="vpn_connected_status">Connected</string>
+    <string name="vpn_disconnected_status">Disconnected</string>
+    <string name="vpn_connecting_status">Connecting&#8230;</string>
+    <string name="about_info">Go Net is a smart vpn</string>
+    <string name="exit_confirm_info">This will disconnect the VPN connection, Are you sure to exit?</string>
+    <string name="err_invalid_url">The config URL is invalid.</string>
+    <string name="config_url_hint">ss://method:password@host:port</string>
+    <string name="vpn_connected">%1$s connected.</string>
+    <string name="vpn_init">Initializing&#8230;</string>
+
+    <!-- Strings related to login/logout-->
+    <string name="welcome_tips">Welcome to Squid VPN</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_login_expired">Login expired</string>
+    <string name="error_login_device_exceed">Too many login devices</string>
+    <string name="error_login_failed">User name or password is wrong</string>
+    <string name="error_login_net">Offline, please check network.</string>
+    <string name="action_logout">Sign out</string>
+
+<!-- new ui-->
+    <string name="drawer_open">open drawer</string>
+    <string name="drawer_close">close drawer</string>
+    <string name="drawer_menu_account">My Account</string>
+    <string name="drawer_menu_setting">Setting</string>
+    <string name="drawer_menu_help">Help &amp; Support</string>
+    <string name="drawer_menu_about">About Us</string>
+
+    <string name="main_text_connecting">CONNECTING...</string>
+    <string name="main_text_connected">CONNECTED</string>
+    <string name="main_text_disconnected">NOT CONNECTED</string>
+    <string name="main_text_failed_connected">FAILED TO CONNECTED</string>
+    <string name="main_text_download_speed">DOWNLOAD SPEED</string>
+    <string name="main_text_upload_speed">UPLOAD SPEED</string>
+    <string name="main_text_default_server_title">USA VIP1</string>
+
+    <string name="main_text_btn_connect">CONNECT</string>
+    <string name="main_text_btn_disconnect">DISCONNECT</string>
+
+    <string name="about_product_title">Our Product</string>
+    <string name="about_product_content">Squid VPN is a multi-platform VPN tool that will build a fast and secure connection between your device and every website or application allowing you to anonymously appear to be anywhere you choose.</string>
+    <string name="about_team_title">Our Team</string>
+    <string name="about_team_content">We have a highly trained team of experienced professionals who strive to provide a higher level of service and support that our clients can’t get anywhere else.</string>
+    <string name="about_contact_title">Contact Us</string>
+    <string name="about_contact_content">If any questions, please contact with: getsquidvpn@gmail.com!</string>
+
+    <string name="facebook_app_id">1685685231743658</string>
+    
+</resources>

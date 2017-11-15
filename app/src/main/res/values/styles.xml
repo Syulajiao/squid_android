@@ -1,0 +1,79 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+
+    <style name="AppThemeAR" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivityAR</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppThemeAR.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="AppThemeAR.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppThemeAR.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        　　　　　<!--进入一个Acitvity包括两部分，当前Activity退出动画，下个个Activity进入动画-->
+        <item name="android:activityOpenEnterAnimation">@anim/right_in</item>  //下个Activty进入动画
+        <item name="android:activityOpenExitAnimation">@anim/left_out</item> //当前Activity退出的动画
+
+        　　　　<!--跳回一个Activity也包括两部分，当前Activity摧毁动画，上个Actiivty进入动画-->
+        <item name="android:activityCloseEnterAnimation">@anim/left_in</item>  //上个Activity进入动画
+        <item name="android:activityCloseExitAnimation">@anim/right_out</item>   //当前Activity退出动画
+    </style>
+
+    <style name="AnimationActivityAR" parent="@android:style/Animation.Activity">
+        　　　　　<!--进入一个Acitvity包括两部分，当前Activity退出动画，下个个Activity进入动画-->
+        <item name="android:activityOpenEnterAnimation">@anim/left_in</item>  //下个Activty进入动画
+        <item name="android:activityOpenExitAnimation">@anim/right_out</item> //当前Activity退出的动画
+
+        　　　　<!--跳回一个Activity也包括两部分，当前Activity摧毁动画，上个Actiivty进入动画-->
+        <item name="android:activityCloseEnterAnimation">@anim/right_in</item>  //上个Activity进入动画
+        <item name="android:activityCloseExitAnimation">@anim/left_out</item>   //当前Activity退出动画
+    </style>
+
+
+   <!-- old style -->
+    <style name="generic_list_view" parent="@android:style/Widget.ListView">
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:dividerHeight">0.0dp</item>
+        <item name="android:divider">@null</item>
+    </style>
+
+
+</resources>

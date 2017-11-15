@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:paddingBottom="2dp"
+              android:background="@color/listitemBgNormal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:id="@+id/id_listitem_server"
+        android:background="@color/listitemBgContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/id_item_geo"
+            android:src="@drawable/us"
+            android:scaleType="centerInside"
+            android:layout_width="50dp"
+            android:layout_height="48dp"/>
+        <TextView
+            android:id="@+id/id_item_des"
+            android:text="@string/main_text_default_server_title"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:layout_width="1dp"
+            android:layout_height="48dp"/>
+        <ImageView
+            android:id="@+id/id_item_sig"
+            android:src="@drawable/signal"
+            android:scaleType="centerInside"
+            android:paddingLeft="20dp"
+            android:layout_width="30dp"
+            android:layout_height="48dp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/id_appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/id_toolbar_main"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:minHeight="?attr/actionBarSize"
+            android:popupTheme="@style/AppTheme.PopupOverlay">
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@id/id_appBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+
+
+            <TextView
+                android:textSize="24sp"
+                android:id="@+id/main_text_connect_status"
+                android:textColor="@color/colorTextConnectStatus"
+                android:gravity="center"
+                android:text="@string/main_text_disconnected"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"/>
+
+            <FrameLayout
+                android:id="@+id/id_layout_geo"
+                android:layout_weight="1"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+                <ImageView
+                    android:id="@+id/id_bg_geo"
+                    android:layout_gravity="center"
+                    android:src="@drawable/bg_geo"
+                    android:scaleType="centerInside"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <ImageView
+                    android:id="@+id/c1"
+                    android:visibility="invisible"
+                    android:layout_gravity="center"
+                    android:src="@drawable/c1"
+                    android:scaleType="centerInside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/c2"
+                    android:visibility="invisible"
+                    android:layout_gravity="center"
+                    android:src="@drawable/c2"
+                    android:scaleType="centerInside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:gravity="start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/dl"
+                            android:scaleType="centerInside"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/id_dl_speed"
+                            android:text="00.00"
+                            android:textSize="24sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorTextConnectStatus"
+                            android:textStyle="bold"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif"/>
+                        <TextView
+                            android:text="KB/S"
+                            android:textSize="14sp"
+                            android:gravity="left|center_vertical"
+                            android:textColor="@color/colorTextConnectStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+                    <TextView
+                        android:gravity="top|start"
+                        android:textColor="@color/colorTextConnectStatus"
+                        android:textSize="14sp"
+                        android:text="@string/main_text_download_speed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="1dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:gravity="end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/up"
+                            android:scaleType="centerInside"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/id_up_speed"
+                            android:text="00.00"
+                            android:textSize="24sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorTextConnectStatus"
+                            android:textStyle="bold"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"/>
+                        <TextView
+                            android:text="KB/S"
+                            android:textSize="14sp"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/colorTextConnectStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:gravity="top|end"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorTextConnectStatus"
+                        android:text="@string/main_text_upload_speed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+
+            <LinearLayout
+                android:id="@+id/id_server_change"
+                android:layout_weight="1"
+                android:paddingTop="18dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+                <ImageView
+                    android:id="@+id/id_main_vpn_geo"
+                    android:scaleType="centerInside"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"/>
+                <TextView
+                    android:id="@+id/id_main_vpn_des"
+                    android:text="@string/main_text_default_server_title"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:layout_width="1dp"
+                    android:layout_height="48dp"/>
+                <ImageView
+                    android:id="@+id/btn_main_next"
+                    android:src="@drawable/next"
+                    android:scaleType="centerInside"
+                    android:paddingLeft="20dp"
+                    android:layout_width="30dp"
+                    android:layout_height="48dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+                <Button
+                    style="?android:attr/borderlessButtonStyle"
+                    android:id="@+id/btn_main_disconnect"
+                    android:visibility="gone"
+                    android:background="@drawable/btn_main_discn"
+                    android:textColor="@color/colorTextConnectStatus"
+                    android:text="@string/main_text_btn_disconnect"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="16sp"/>
+                <Button
+                    style="?android:attr/borderlessButtonStyle"
+                    android:id="@+id/btn_main_connect"
+                    android:background="@drawable/btn_main_cn"
+                    android:textColor="@color/colorTextConnectStatus"
+                    android:text="@string/main_text_btn_connect"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

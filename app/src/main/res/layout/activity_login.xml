@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_bg_color"
+    android:orientation="vertical"
+    tools:context=".ui.LoginActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/launch_logo"
+        android:src="@drawable/launch_logo"
+        android:scaleType="centerInside"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        />
+
+    <!-- Login progress -->
+        <!--
+    <ProgressBar
+        android:layout_below="@+id/launch_logo"
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:visibility="visible"
+        android:layout_gravity="center_horizontal"
+        />
+    -->
+    </LinearLayout>
+
+</RelativeLayout>

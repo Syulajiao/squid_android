@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "456245800654",
+    "firebase_url": "https://squidvpn-34718.firebaseio.com",
+    "project_id": "squidvpn-34718",
+    "storage_bucket": "squidvpn-34718.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456245800654:android:895974d6cb842918",
+        "android_client_info": {
+          "package_name": "com.get.squidvpn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456245800654-arubo2ll02nevqqr0cbqs1rb8e9hh7vv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd0nZc6Ag0wW4O6XJXoW8Pr_BewMKpdDY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

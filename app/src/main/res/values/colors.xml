@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="login_bg_color">#333140</color>
+    <color name="white">#ffffff</color>
+    <color name="white_a_20">#33ffffff</color>
+    <color name="white_a_40">#66ffffff</color>
+    <color name="white_a_50">#80ffffff</color>
+    <color name="white_a_60">#99ffffff</color>
+
+    <color name="colorPrimary">#333140</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorTextConnectStatus">#ffffff</color>
+    <color name="btnMainColor">#53BAE5</color>
+    <color name="btnMainColorDisable">#89bddf</color>
+    <color name="btnMainColorDisconnect">#fe9315</color>
+    <color name="btnMainColorDisconnectDisable">#ff8415</color>
+
+    <color name="listitemBgNormal">#eeeeee</color>
+    <color name="listitemBgContent">#ffffff</color>
+
+    <color name="colorTitle">#000000</color>
+    <color name="colorContent">#222222</color>
+
+</resources>
