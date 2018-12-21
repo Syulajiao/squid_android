@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.0'
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.get.squidvpn"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 24
-        versionName "2.1.1"
+        versionName "2.1.2"
 
         multiDexEnabled true
     }
@@ -29,12 +29,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
             applicationVariants.all { variant ->
-                variant.outputs.each { output ->
-                    def outputFile = output.outputFile
-                    if (outputFile != null && outputFile.name.endsWith('release.apk')) {
-                        def fileName = "squidvpn-v${defaultConfig.versionName}.apk";
-                        output.outputFile = file("${outputFile.parent}/${fileName}")
-                    }
+                variant.outputs.all { output ->
+
+                    outputFileName = new File(
+                            "./",
+                            output.outputFile.name
+                    )
                 }
             }
         }
@@ -52,29 +52,27 @@ repositories {
 }
 
 dependencies {
-    compile 'com.android.support:multidex:1.0.1'
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile('com.googlecode.json-simple:json-simple:1.1.1') {
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation ('com.googlecode.json-simple:json-simple:1.1.1') {
         exclude group: 'junit', module: 'junit'
         exclude group: 'org.hamcrest', module: 'hamcrest-core'
     }
-    compile 'com.embarkmobile:zxing-android-minimal:2.0.0@aar'
-    compile 'com.embarkmobile:zxing-android-integration:2.0.0@aar'
-    compile 'com.google.zxing:core:3.0.1'
-    compile 'org.bouncycastle:bcprov-jdk15on:1.52'
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.alibaba:fastjson:1.2.17'
-    compile 'com.android.support:appcompat-v7:22.2.1'
-    testCompile 'junit:junit:4.12'
-    compile 'com.squareup:otto:1.3.8'
-    compile 'com.umeng.analytics:analytics:6.0.1'
-    compile 'com.facebook.android:facebook-android-sdk:4.20.0'
-    compile 'com.android.support:design:25.1.1'
-    compile 'com.google.firebase:firebase-analytics:10.2.6'
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
-        transitive = true;
-    }
+    implementation 'com.embarkmobile:zxing-android-minimal:2.0.0@aar'
+    implementation 'com.embarkmobile:zxing-android-integration:2.0.0@aar'
+    implementation 'com.google.zxing:core:3.0.1'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.52'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.alibaba:fastjson:1.2.17'
+    implementation 'com.android.support:appcompat-v7:22.2.1'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.squareup:otto:1.3.8'
+    implementation 'com.umeng.analytics:analytics:6.0.1'
+    implementation 'com.facebook.android:facebook-android-sdk:4.20.0'
+    implementation 'com.android.support:design:25.1.1'
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.5'
 }
 
 apply plugin: 'com.google.gms.google-services'

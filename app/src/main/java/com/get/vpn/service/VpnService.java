@@ -39,19 +39,19 @@ public class VpnService {
 
     public static UserModel getFreeAccount() {
         UserModel userModel = new UserModel();
-
+/*
         userModel.setEmail("android@istmedia.com");
         userModel.setPassword("MlvMDxr5");
-
+*/
         /*
         // sandbox
        userModel.setEmail("zhengyu@istmedia.com");
         userModel.setPassword("zhengyu1");
         */
-/*
+
         userModel.setEmail("wanyuan@istmedia.com");
-        userModel.setPassword("iloveyou&520");
-*/
+        userModel.setPassword("Iloveyou&520");
+
         return userModel;
     }
 

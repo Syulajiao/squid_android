@@ -20,6 +20,7 @@ import com.get.vpn.tcpip.IPHeader;
 import com.get.vpn.tcpip.TCPHeader;
 import com.get.vpn.tcpip.UDPHeader;
 import com.get.vpn.ui.MainActivity;
+import com.get.vpn.utils.IpCheck;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -404,11 +405,19 @@ public class LocalVpnService extends VpnService implements Runnable {
         for (String name : new String[]{"net.dns1", "net.dns2", "net.dns3", "net.dns4",}) {
             String value = (String) method.invoke(null, name);
             if (value != null && !"".equals(value) && !servers.contains(value)) {
-                servers.add(value);
-                builder.addRoute(value, 32);
+
+                if (IpCheck.isIPv4(value)) {
+                    servers.add(value);
+                    builder.addRoute(value, 32);
+                } else if (IpCheck.isIPv6(value)) {
+                    servers.add(value);
+                    builder.addRoute(value, 128);
+                } else {}
                 if (ProxyConfig.IS_DEBUG)
                     System.out.printf("%s=%s\n", name, value);
             }
+
+
         }
 
         Intent intent = new Intent(this, MainActivity.class);
